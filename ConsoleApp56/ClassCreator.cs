@@ -9,6 +9,39 @@ namespace ConsoleApp56
 {
     internal static class ClassCreator
     {
+        public static Занятие Занятие()
+        {
+            string date = "";
+            Console.WriteLine("Введите число (0 для выбора сегоднешней даты)");
+            int a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите номер месяца (0 для выбора сегоднешней даты)");
+            int b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите год (0 для выбора сегоднешней даты)");
+            int c = int.Parse(Console.ReadLine());
+            if (a == 0 || b == 0 || c == 0)
+            {
+                date = DateTime.Today.ToString();
+
+            }
+            else
+            {
+                DateTime someDate = new DateTime(c, b, a);
+                date = someDate.ToString();
+            }
+            Дисциплина дисциплина = Дисциплина();
+            Аудитория аудитория = Аудитория();
+            Группа группа = Группа();
+            Пара пара = Пара();
+            Вид вид = Вид();
+
+
+            Console.WriteLine();
+            return new Занятие(date, дисциплина, аудитория, группа, пара, вид);
+        }
+        public static Дисциплина Дисциплина()
+        {
+            return new Дисциплина();
+        }
         public static Аудитория Аудитория()
         {
             Console.WriteLine("Введите название: ");
@@ -34,6 +67,18 @@ namespace ConsoleApp56
         public static Оборудование Оборудование()
         {
             return new Оборудование();
+        }
+        public static Группа Группа()
+        {
+            return new Группа();
+        }
+        public static Пара Пара()
+        {
+            return new Пара();
+        }
+        public static Вид Вид()
+        {
+            return new Вид();
         }
     }
 }
