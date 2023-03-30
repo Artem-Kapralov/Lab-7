@@ -43,7 +43,12 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Аудитория.cs" />
+    <Compile Include="Вид.cs" />
+    <Compile Include="Группа.cs" />
+    <Compile Include="Дисциплина.cs" />
+    <Compile Include="Занятие.cs" />
     <Compile Include="Оборудование .cs" />
+    <Compile Include="Пара.cs" />
     <Compile Include="Сотрудник.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
