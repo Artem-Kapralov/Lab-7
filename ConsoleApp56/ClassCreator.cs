@@ -11,22 +11,16 @@ namespace ConsoleApp56
     {
         public static Занятие Занятие()
         {
-            string date = "";
-            Console.WriteLine("Введите число (0 для выбора сегоднешней даты)");
-            int a = int.Parse(Console.ReadLine());
-            Console.WriteLine("Введите номер месяца (0 для выбора сегоднешней даты)");
-            int b = int.Parse(Console.ReadLine());
-            Console.WriteLine("Введите год (0 для выбора сегоднешней даты)");
-            int c = int.Parse(Console.ReadLine());
-            if (a == 0 || b == 0 || c == 0)
+            
+           
+            bool flag;
+            DateTime date = new DateTime();
+            Console.WriteLine("Введите дату )");
+             flag = DateTime.TryParse(Console.ReadLine(), out date);
+            if (flag == false)
             {
-                date = DateTime.Today.ToString();
+                date = DateTime.Today;
 
-            }
-            else
-            {
-                DateTime someDate = new DateTime(c, b, a);
-                date = someDate.ToString();
             }
             Дисциплина дисциплина = Дисциплина();
             Аудитория аудитория = Аудитория();
@@ -36,7 +30,7 @@ namespace ConsoleApp56
 
 
             Console.WriteLine();
-            return new Занятие(date, дисциплина, аудитория, группа, пара, вид);
+            return new Занятие(дисциплина, аудитория, группа, пара, вид, date);
         }
         public static Дисциплина Дисциплина()
         {
