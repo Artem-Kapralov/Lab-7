@@ -11,17 +11,7 @@ namespace ConsoleApp56
     {
         public static Занятие Занятие()
         {
-            
-           
-            bool flag;
-            DateTime date = new DateTime();
-            Console.WriteLine("Введите дату )");
-             flag = DateTime.TryParse(Console.ReadLine(), out date);
-            if (flag == false)
-            {
-                date = DateTime.Today;
 
-            }
             Дисциплина дисциплина = Дисциплина();
             Аудитория аудитория = Аудитория();
             Группа группа = Группа();
@@ -30,7 +20,24 @@ namespace ConsoleApp56
 
 
             Console.WriteLine();
-            return new Занятие(дисциплина, аудитория, группа, пара, вид, date);
+
+            Console.WriteLine("Введите дату ");
+            DateTime date;
+            if (DateTime.TryParse(Console.ReadLine(), out date))
+                return new Занятие(
+                 дисциплина,
+                 аудитория,
+                 группа,
+                 пара,
+                 вид,
+                 date);
+            else
+                return new Занятие(
+                дисциплина,
+                аудитория,
+                группа,
+                пара,
+                вид);
         }
         public static Дисциплина Дисциплина()
         {

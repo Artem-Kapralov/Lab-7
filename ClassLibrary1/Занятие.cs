@@ -15,10 +15,10 @@ namespace ClassLibrary1
         public Пара Пара { get; }
         public Вид Вид { get; }
 
-        public Занятие(Дисциплина дисциплина, Аудитория аудитория, Группа группа, Пара пара, Вид вид, DateTime date)
+        public Занятие(Дисциплина дисциплина, Аудитория аудитория, Группа группа, Пара пара, Вид вид, DateTime? date = null)
         {
 
-            this.Date = date;
+            this.Date = date ?? DateTime.Today;
             this.Дисциплина = дисциплина;
             this.Аудитория = аудитория;
             this.Группа = группа;
