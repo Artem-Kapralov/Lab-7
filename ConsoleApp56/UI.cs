@@ -11,12 +11,12 @@ namespace ConsoleApp56
     {
         public static void Print(Занятие занятие)
         {
-            Console.WriteLine($"Дата: {занятие.Date}");
-            Console.WriteLine($"Дисциплина: ");
+            Console.WriteLine($"Дата: {занятие.Date.ToLongDateString()}");
+            Console.WriteLine($"Дисциплина: {занятие.Дисциплина} ");
             Console.WriteLine($"Аудитория: {занятие.Аудитория.Название} ");
-            Console.WriteLine($"Группа: ");
-            Console.WriteLine($"Пара: ");
-            Console.WriteLine($"Вид: ");
+            Console.WriteLine($"Группа: {занятие.Группа} ");
+            Console.WriteLine($"Пара: {занятие.Пара} ");
+            Console.WriteLine($"Вид: {занятие.Вид} ");
         }
         public static void Print(Аудитория аудитория)
         {
@@ -32,6 +32,25 @@ namespace ConsoleApp56
 
         }
         public static void Print(Оборудование оборудование)
+        {
+
+        }
+
+        public static void Print(Вид вид)
+        {
+
+        }
+        public static void Print(Группа группа)
+        {
+
+        }
+
+        public static void Print(Дисциплина дисциплина)
+        {
+
+        }
+
+        public static void Print(Пара пара)
         {
 
         }

@@ -8,16 +8,17 @@ namespace ClassLibrary1
 {
     public class Занятие
     {
-        public string Date { get; }
+        public DateTime Date { get; }
         public Дисциплина Дисциплина { get; }
         public Аудитория Аудитория { get; }
         public Группа Группа { get; }
         public Пара Пара { get; }
         public Вид Вид { get; }
 
-        public Занятие(string date, Дисциплина дисциплина, Аудитория аудитория, Группа группа, Пара пара, Вид вид)
+        public Занятие(Дисциплина дисциплина, Аудитория аудитория, Группа группа, Пара пара, Вид вид, DateTime? date = null)
         {
-            this.Date = date;
+
+            this.Date = date ?? DateTime.Today;
             this.Дисциплина = дисциплина;
             this.Аудитория = аудитория;
             this.Группа = группа;
