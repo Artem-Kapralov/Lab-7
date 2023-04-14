@@ -12,11 +12,13 @@ namespace ConsoleApp56
         public static void Print(Занятие занятие)
         {
             Console.WriteLine($"Дата: {занятие.Date.ToLongDateString()}");
-            Console.WriteLine($"Дисциплина: {занятие.Дисциплина} ");
-            Console.WriteLine($"Аудитория: {занятие.Аудитория.Название} ");
-            Console.WriteLine($"Группа: {занятие.Группа} ");
-            Console.WriteLine($"Пара: {занятие.Пара} ");
-            Console.WriteLine($"Вид: {занятие.Вид} ");
+            Print(занятие.Дисциплина);
+            Print(занятие.Сотрудник);
+            Print(занятие.Аудитория);
+            Print(занятие.Группа);
+            Print(занятие.Пара);
+            Print(занятие.Вид);
+
         }
         public static void Print(Аудитория аудитория)
         {

@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1
 {
+    // https://docs.google.com/document/d/1KZXfKJussGflgWnWylGbFrwmdcn3liYKIsgmtxB1mN0/edit
     public class Занятие
     {
         public DateTime Date { get; }
         public Дисциплина Дисциплина { get; }
+        public Сотрудник Сотрудник { get; }
         public Аудитория Аудитория { get; }
         public Группа Группа { get; }
         public Пара Пара { get; }
@@ -20,6 +22,7 @@ namespace ClassLibrary1
 
             this.Date = date ?? DateTime.Today;
             this.Дисциплина = дисциплина;
+            this.Сотрудник = Сотрудник;
             this.Аудитория = аудитория;
             this.Группа = группа;
             this.Пара = пара;
