@@ -17,7 +17,7 @@ namespace ClassLibrary1
         public Пара Пара { get; }
         public Вид Вид { get; }
 
-        public Занятие(Дисциплина дисциплина, Аудитория аудитория, Группа группа, Пара пара, Вид вид, DateTime? date = null)
+        public Занятие(Дисциплина дисциплина, Сотрудник сотрудник, Аудитория аудитория, Группа группа, Пара пара, Вид вид, DateTime? date = null)
         {
 
             this.Date = date ?? DateTime.Today;

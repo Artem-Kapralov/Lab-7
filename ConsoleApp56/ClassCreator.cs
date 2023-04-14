@@ -13,6 +13,7 @@ namespace ConsoleApp56
         {
 
             Дисциплина дисциплина = Дисциплина();
+            Сотрудник сотрудник = Сотрудник();
             Аудитория аудитория = Аудитория();
             Группа группа = Группа();
             Пара пара = Пара();
@@ -22,10 +23,10 @@ namespace ConsoleApp56
             Console.WriteLine();
 
             Console.WriteLine("Введите дату ");
-            DateTime date;
-            if (DateTime.TryParse(Console.ReadLine(), out date))
+            if (DateTime.TryParse(Console.ReadLine(), out DateTime date))
                 return new Занятие(
                  дисциплина,
+                 сотрудник,
                  аудитория,
                  группа,
                  пара,
@@ -34,6 +35,7 @@ namespace ConsoleApp56
             else
                 return new Занятие(
                 дисциплина,
+                сотрудник,
                 аудитория,
                 группа,
                 пара,
