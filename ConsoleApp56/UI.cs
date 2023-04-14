@@ -9,6 +9,17 @@ namespace ConsoleApp56
 {
     internal static class UI
     {
+        public static void Print(Занятие занятие)
+        {
+            Console.WriteLine($"Дата: {занятие.Date.ToLongDateString()}");
+            Print(занятие.Дисциплина);
+            Print(занятие.Сотрудник);
+            Print(занятие.Аудитория);
+            Print(занятие.Группа);
+            Print(занятие.Пара);
+            Print(занятие.Вид);
+
+        }
         public static void Print(Аудитория аудитория)
         {
             Console.WriteLine($"Название: {аудитория.Название}");
@@ -23,6 +34,25 @@ namespace ConsoleApp56
 
         }
         public static void Print(Оборудование оборудование)
+        {
+
+        }
+
+        public static void Print(Вид вид)
+        {
+
+        }
+        public static void Print(Группа группа)
+        {
+
+        }
+
+        public static void Print(Дисциплина дисциплина)
+        {
+
+        }
+
+        public static void Print(Пара пара)
         {
 
         }

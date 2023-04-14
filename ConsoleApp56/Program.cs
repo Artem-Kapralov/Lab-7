@@ -17,6 +17,7 @@ namespace ConsoleApp56
                 Console.WriteLine("Введите название класса, который хотите создать: ");
                 switch (Console.ReadLine())
                 {
+                    case "Занятие": UI.Print(ClassCreator.Занятие()); break;
                     case "Аудитория": UI.Print(ClassCreator.Аудитория()); break;
                     default: Console.WriteLine("Такой класс не существует"); break;
                 }
